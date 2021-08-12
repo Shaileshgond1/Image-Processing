@@ -1,0 +1,24 @@
+import cv2
+import numpy
+p1=cv2.imread("sharu.jpg")
+p2=cv2.imread("srk.jpg")
+
+p1.shape
+p2.shape
+q1=p1resize=cv2.resize(p1,(100,200))
+q1.shape
+q2=p2resize=cv2.resize(p2,(100,200))
+q2.shape
+cq1=q1[0:201,0:100]
+photo1=numpy.hstack((q1,q2))
+
+
+import cv2
+cv2.imshow("hi", photo1)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+photo2=numpy.vstack((q1,q2))
+cv2.imshow("hi", photo2)
+cv2.waitKey()
+cv2.destroyAllWindows()
