@@ -1,0 +1,21 @@
+import pandas 
+import numpy
+import pandas as pd
+import numpy as np
+
+import cv2
+img=cv2.imread("sharu.jpg")
+img2=cv2.imread("srk.jpg")
+import matplotlib.pyplot as plt
+
+model = cv2.CascadeClassifier ('haarcascade_frontalface_default.xml')
+face1 =model.detectMultiScale (img)
+print (face1)
+face2= model.detectMultiScale (img2)
+print (face2)
+
+img2[37:(37+67) , 132:(132+67)]=img[37:(37+67) , 132:(132+67)]
+
+cv2.imshow('hi',img2)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
